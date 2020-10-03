@@ -1,4 +1,5 @@
 WSJoyStick.JoyStickInit()
+basic.showIcon(IconNames.Asleep)
 basic.forever(function () {
     if (WSJoyStick.Listen_Key(KEY.E)) {
         images.arrowImage(ArrowNames.North).showImage(0)
