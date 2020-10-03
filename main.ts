@@ -1,5 +1,6 @@
 WSJoyStick.JoyStickInit()
 radio.setGroup(123)
+radio.sendString("S,W,N,E")
 basic.showIcon(IconNames.Asleep)
 basic.forever(function () {
     if (WSJoyStick.Listen_Key(KEY.E)) {
