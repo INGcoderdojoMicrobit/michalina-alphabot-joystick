@@ -11,11 +11,11 @@ basic.forever(function () {
             `)
     } else if (WSJoyStick.Listen_Key(KEY.C)) {
         basic.showLeds(`
-            # # # # .
+            . # # # .
             # . . . .
             # . . . .
             # . . . .
-            # # # # .
+            . # # # .
             `)
     } else if (WSJoyStick.Listen_Key(KEY.D)) {
         basic.showLeds(`
