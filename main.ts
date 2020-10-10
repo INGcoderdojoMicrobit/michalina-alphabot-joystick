@@ -11,6 +11,7 @@ basic.forever(function () {
             # . . . .
             # # # # .
             `)
+        radio.sendString("E")
     } else if (WSJoyStick.Listen_Key(KEY.C)) {
         basic.showLeds(`
             . # # # .
@@ -19,6 +20,7 @@ basic.forever(function () {
             # . . . .
             . # # # .
             `)
+        radio.sendString("C")
     } else if (WSJoyStick.Listen_Key(KEY.D)) {
         basic.showLeds(`
             # # # . .
@@ -27,6 +29,7 @@ basic.forever(function () {
             # . . # .
             # # # . .
             `)
+        radio.sendString("D")
     } else if (WSJoyStick.Listen_Key(KEY.F)) {
         basic.showLeds(`
             # # # # .
@@ -35,6 +38,7 @@ basic.forever(function () {
             # . . . .
             # . . . .
             `)
+        radio.sendString("F")
     } else if (WSJoyStick.Listen_Dir(DIR.U)) {
         images.arrowImage(ArrowNames.North).showImage(0)
     } else if (WSJoyStick.Listen_Dir(DIR.D)) {
