@@ -1,18 +1,22 @@
 let v2 = 0
 let x = 0
-let Y = 0
 let V = 0
+let Y = 0
 WSJoyStick.JoyStickInit()
 radio.setGroup(123)
 radio.sendString("S,W,N,E")
 basic.showIcon(IconNames.Asleep)
 basic.forever(function () {
-    serial.writeValue("y", V)
     Y = pins.analogReadPin(AnalogPin.P2)
     V = Math.round(Math.map(Y, 0, 1023, -100, 100))
     x = pins.analogReadPin(AnalogPin.P1)
     v2 = Math.round(Math.map(x, 0, 1023, -100, 100))
-    radio.sendNumber(V)
+    serial.writeValue("y", V)
+    if (V < -20 || V > 20) {
+        radio.sendNumber(V)
+    } else {
+        radio.sendNumber(0)
+    }
     basic.pause(10)
     if (WSJoyStick.Listen_Key(KEY.E)) {
         basic.showLeds(`
